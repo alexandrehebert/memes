@@ -68,6 +68,7 @@ import { defineComponent, computed, onMounted, ref } from 'vue';
 import { useMemeStore } from '../store';
 import { useHead } from '@vueuse/head';
 import { useRoute } from 'vue-router';
+import { HOST, BASE_URL } from '../constants';
 
 export default defineComponent({
   name: 'MemeDetail',
@@ -94,12 +95,12 @@ export default defineComponent({
         { property: 'og:title', content: meme.value.name },
         { property: 'og:description', content: meme.value.description },
         { property: 'og:url', content: currentUrl.value },
-        { property: 'og:image', content: meme.value.image },
+        { property: 'og:image', content: `${HOST}${BASE_URL}/${meme.value.image}`.replace(/[\/]+/g, '/') },
         { property: 'og:type', content: 'website' },
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:description', content: meme.value.description },
         { name: 'twitter:title', content: meme.value.name },
-        { name: 'twitter:image', content: meme.value.image }
+        { name: 'twitter:image', content: `${HOST}${BASE_URL}/${meme.value.image}`.replace(/[\/]+/g, '/') }
       ] : []
     }));
 
