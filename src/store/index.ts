@@ -12,13 +12,14 @@ export const useMemeStore = defineStore('memes', {
   actions: {
     async loadData() {
       try {
-        const response = await fetch('/memes.json');
+        console.log(BASE_URL);
+        const response = await fetch(BASE_URL + 'memes.json');
         const data = await response.json();
         this.memes = data.memes.map((meme: any): Meme => ({
           name: meme.name.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
           description: meme.name,
           category: meme.category,
-          image: `${window.location.origin}/${BASE_URL ? BASE_URL + '/' : ''}${meme.image}`,
+          image: `${window.location.origin}/${BASE_URL}${meme.image}`,
           tags: meme.tags,
         }));
       } catch (error) {

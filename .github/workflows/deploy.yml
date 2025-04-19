@@ -14,7 +14,6 @@ permissions:
 env:
   VITE_IS_GH_PAGES: 'true'
   VITE_BASE_URL: /memes/
-  VITE_API_ENDPOINT: /memes/
 
 concurrency:
   group: 'pages'
