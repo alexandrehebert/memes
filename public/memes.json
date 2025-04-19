@@ -4,37 +4,37 @@
       "name": "Oh What The F*ck",
       "category": "dog",
       "image": "/memes/dog-surprised.webp",
-      "tags": ["expression", "surprised"]
+      "tags": ["surprised"]
     },
     {
       "name": "That's Suspicious",
       "category": "dog",
       "image": "/memes/dog-suspicious.png",
-      "tags": ["expression", "suspicious"]
+      "tags": ["suspicious", "doubt", "skeptical"]
     },
     {
       "name": "Feeling Disgusted",
       "category": "cat",
       "image": "/memes/cat-disgusted.png",
-      "tags": ["expression", "disgusting"]
+      "tags": ["disgusted", "vomit"]
     },
     {
       "name": "Unexpected Shower",
       "category": "cat",
       "image": "/memes/cat-shower.png",
-      "tags": ["shower"]
+      "tags": ["shower", "wet", "water"]
     },
     {
       "name": "Raccocooning",
       "category": "raccoon",
       "image": "/memes/raccoon-cocoon.jpg",
-      "tags": ["cocooning"]
+      "tags": ["cocooning", "towel"]
     },
     {
       "name": "Emotion Overflow",
       "category": "raccoon",
       "image": "/memes/raccoon-emotional.png",
-      "tags": ["expression", "emotional"]
+      "tags": ["emotional", "sensitive"]
     },
     {
       "name": "On My Way",
