@@ -18,7 +18,7 @@ export const useMemeStore = defineStore('memes', {
           name: meme.name.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
           description: meme.name,
           category: meme.category,
-          image: `${window.location.origin}/${BASE_URL}${meme.image}`,
+          image: `${window.location.origin}${meme.image}`,
           tags: meme.tags,
         }));
       } catch (error) {
