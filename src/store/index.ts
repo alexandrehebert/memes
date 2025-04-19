@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia';
 import { Meme } from '../types';
 import { useTheme } from 'vuetify';
-import { BASE_URL } from '../constants';
+import { BASE_URL, HOST } from '../constants';
 
 export const useMemeStore = defineStore('memes', {
   state: () => {
@@ -18,9 +18,10 @@ export const useMemeStore = defineStore('memes', {
           name: meme.name.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
           description: meme.name,
           category: meme.category,
-          image: `${window.location.origin}${meme.image}`,
+          image: `${HOST}${BASE_URL}/${meme.image}`.replace(/[\/]+/g, '/'),
           tags: meme.tags,
         }));
+        console.log('Memes loaded:', this.memes);
       } catch (error) {
         console.error('Error loading memes:', error);
       }
