@@ -29,7 +29,7 @@
           <v-col cols="12" class="text-capitalize">
             {{ category.name }}
           </v-col>
-          <v-col v-for="meme in category.memes" :key="meme.slug" cols="12" sm="6" md="4" lg="3">
+          <v-col v-for="meme in category.memes" :key="meme.name" cols="12" sm="6" md="4" lg="3">
             <v-card @click="goToMeme(meme)" height="100%" elevation="2" variant="elevated">
               <div class="position-relative">
                   <v-img :src="meme.image" :aspect-ratio="1" cover></v-img>
@@ -40,7 +40,7 @@
                               v-bind="props"
                               size="small"
                               class="copy-btn"
-                              @click.stop="copyMemeLink(meme.slug)"
+                              @click.stop="copyMemeLink(meme)"
                           >
                               <v-icon size="small">mdi-content-copy</v-icon>
                           </v-btn>
@@ -86,6 +86,7 @@
 import { defineComponent, onMounted, ref, computed } from 'vue';
 import { useRouter } from 'vue-router';
 import { useMemeStore } from '../store';
+import { Meme } from '../types';
 
 const fuzzyMatch = (text: string, search: string): boolean => {
   text = text.toLowerCase();
@@ -150,10 +151,10 @@ export default defineComponent({
       router.push({ name: 'meme-detail', params: { name: meme.name, category: meme.category } });
     };
 
-    const copyMemeLink = (slug: string) => {
+    const copyMemeLink = (meme: Meme) => {
       const url = `${window.location.origin}${router.resolve({ 
         name: 'meme-detail', 
-        params: { slug } 
+        params: { category: meme.category, name: meme.name } 
       }).href.substring(2)}`;
       navigator.clipboard.writeText(url);
       tooltipText.value = 'Copied!';
