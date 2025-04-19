@@ -8,7 +8,13 @@ export default defineConfig({
   base: process.env.VITE_BASE_URL || '/',
   plugins: [
     vue(),
-    vuetify({ autoImport: true }), // Ensure Vuetify plugin is configured
+    vuetify({ autoImport: true }),
+    {
+      name: 'html-transform',
+      transformIndexHtml(html) {
+        return html.replace('$BASE', process.env.VITE_BASE_URL || '/');
+      }
+    }
   ],
   css: {
     preprocessorOptions: {
@@ -17,4 +23,14 @@ export default defineConfig({
       },
     },
   },
+  server: {
+    port: process.env.PORT ? parseInt(process.env.PORT) : 3000,
+  },
+  build: {
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, 'index.html'),
+      },
+    },
+  }
 });
