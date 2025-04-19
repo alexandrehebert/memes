@@ -22,7 +22,7 @@
         <v-card variant="flat">
           <v-card-item>
             <v-card-title class="text-h4">{{ meme.name }}</v-card-title>
-            <v-card-subtitle class="text-subtitle-1">{{ meme.category }}</v-card-subtitle>
+            <v-card-subtitle class="text-subtitle-1 text-capitalize">{{ meme.category }}</v-card-subtitle>
             <div class="mt-2">
               <v-chip
                 v-for="tag in meme.tags"
@@ -71,12 +71,6 @@ import { useRoute } from 'vue-router';
 
 export default defineComponent({
   name: 'MemeDetail',
-  props: {
-    id: {
-      type: String,
-      required: true
-    }
-  },
   setup() {
     const route = useRoute();
     const memeStore = useMemeStore();
@@ -87,17 +81,13 @@ export default defineComponent({
     });
 
     const meme = computed(() => {
-      const m = memeStore.getMemeBySlug(route.params.slug as string);
-      if (m) {
-        return {
-          ...m,
-          image: `${window.location.origin}${m.image}`
-        };
-      }
-      return null;
+      return memeStore.getMemeByNameAndCategory(
+        route.params.name as string,
+        route.params.category as string
+      );
     });
 
-    const currentUrl = computed(() => window.location.href);
+    const currentUrl = computed(() => window.location.href.split('?')[0]);
 
     useHead(() => ({
       meta: meme.value ? [
@@ -111,7 +101,7 @@ export default defineComponent({
     }));
 
     const copyCurrentLink = () => {
-      navigator.clipboard.writeText(window.location.href);
+      navigator.clipboard.writeText(currentUrl.value);
       tooltipText.value = 'Link copied!';
       setTimeout(() => tooltipText.value = 'Copy link', 2000);
     };

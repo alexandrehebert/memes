@@ -1,8 +1,7 @@
 export interface Meme {
-  id: number;
   name: string;
+  description: string;
   category: string;
   image: string;
   tags: string[];
-  slug: string;
 }

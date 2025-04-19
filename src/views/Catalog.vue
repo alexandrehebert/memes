@@ -26,11 +26,11 @@
     <template v-if="memeStore.memes.length > 0">
       <template v-for="category in groupedMemes" :key="category.name">
         <v-row v-if="category.memes.length > 0" class="mt-4">
-          <v-col cols="12">
+          <v-col cols="12" class="text-capitalize">
             {{ category.name }}
           </v-col>
           <v-col v-for="meme in category.memes" :key="meme.slug" cols="12" sm="6" md="4" lg="3">
-            <v-card @click="goToMeme(meme.slug)" height="100%" elevation="2" variant="elevated">
+            <v-card @click="goToMeme(meme)" height="100%" elevation="2" variant="elevated">
               <div class="position-relative">
                   <v-img :src="meme.image" :aspect-ratio="1" cover></v-img>
                   <v-tooltip location="left">
@@ -49,19 +49,20 @@
                   </v-tooltip>
               </div>
               <v-card-item>
-                <v-card-title>{{ meme.name }}</v-card-title>
-                <v-card-subtitle>{{ meme.category }}</v-card-subtitle>
-                <div class="mt-2">
-                  <v-chip
-                    v-for="tag in meme.tags"
-                    :key="tag"
-                    size="small"
-                    class="mr-1 mb-1"
-                    variant="tonal"
-                  >
-                    {{ tag }}
-                  </v-chip>
-                </div>
+                <v-card-title>{{ meme.description }}</v-card-title>
+                <v-card-subtitle>
+                    <div class="mt-2">
+                    <v-chip
+                        v-for="tag in meme.tags"
+                        :key="tag"
+                        size="small"
+                        class="mr-1 mb-1"
+                        variant="tonal"
+                    >
+                        {{ tag }}
+                    </v-chip>
+                    </div>
+                </v-card-subtitle>
               </v-card-item>
             </v-card>
           </v-col>
@@ -145,8 +146,8 @@ export default defineComponent({
       await memeStore.loadData();
     });
 
-    const goToMeme = (slug: string) => {
-      router.push({ name: 'meme-detail', params: { slug } });
+    const goToMeme = (meme: Meme) => {
+      router.push({ name: 'meme-detail', params: { name: meme.name, category: meme.category } });
     };
 
     const copyMemeLink = (slug: string) => {

@@ -9,7 +9,7 @@ const routes: RouteRecordRaw[] = [
     component: Catalog 
   },
   { 
-    path: '/meme/:slug',
+    path: '/:category/:name',
     name: 'meme-detail',
     component: () => import('../views/MemeDetail.vue')
   }
