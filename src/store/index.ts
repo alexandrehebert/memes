@@ -12,7 +12,6 @@ export const useMemeStore = defineStore('memes', {
   actions: {
     async loadData() {
       try {
-        console.log(BASE_URL);
         const response = await fetch(BASE_URL + 'memes.json');
         const data = await response.json();
         this.memes = data.memes.map((meme: any): Meme => ({
