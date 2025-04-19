@@ -95,12 +95,12 @@ export default defineComponent({
         { property: 'og:title', content: meme.value.name },
         { property: 'og:description', content: meme.value.description },
         { property: 'og:url', content: currentUrl.value },
-        { property: 'og:image', content: `${HOST}${BASE_URL}/${meme.value.image}`.replace(/[\/]+/g, '/') },
+        { property: 'og:image', content: `${HOST}/${meme.value.image}`.replace(/[\/]+/g, '/') },
         { property: 'og:type', content: 'website' },
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:description', content: meme.value.description },
         { name: 'twitter:title', content: meme.value.name },
-        { name: 'twitter:image', content: `${HOST}${BASE_URL}/${meme.value.image}`.replace(/[\/]+/g, '/') }
+        { name: 'twitter:image', content: `${HOST}/${meme.value.image}`.replace(/[\/]+/g, '/') }
       ] : []
     }));
 
