@@ -12,7 +12,7 @@ export default defineConfig({
     {
       name: 'html-transform',
       transformIndexHtml(html) {
-        return html.replace('$BASE', process.env.VITE_BASE_URL || '/');
+        return html.replace('$BASE_URL', (process.env.VITE_BASE_URL ?? '') + '/');
       }
     }
   ],
