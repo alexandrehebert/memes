@@ -17,8 +17,8 @@ const routes: RouteRecordRaw[] = [
 
 const router = createRouter({
   history: IS_GH_PAGES
-  ? createWebHashHistory(BASE_URL)
-  : createWebHistory(BASE_URL),
+  ? createWebHashHistory(BASE_URL + '/')
+  : createWebHistory(BASE_URL + '/'),
   routes,
 });
 
