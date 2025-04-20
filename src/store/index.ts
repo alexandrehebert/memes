@@ -12,7 +12,7 @@ export const useMemeStore = defineStore('memes', {
   actions: {
     async loadData() {
       try {
-        const response = await fetch(BASE_URL + 'memes.json');
+        const response = await fetch(BASE_URL + '/memes.json');
         const data = await response.json();
         this.memes = data.memes.map((meme: any): Meme => ({
           name: meme.name.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
