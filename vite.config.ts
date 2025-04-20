@@ -9,6 +9,12 @@ export default defineConfig({
   plugins: [
     vue(),
     vuetify({ autoImport: true }),
+    {
+      name: 'html-transform',
+      transformIndexHtml(html) {
+        return html.replace('$BASE', process.env.VITE_BASE_URL || '/');
+      }
+    }
   ],
   css: {
     preprocessorOptions: {
