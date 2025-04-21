@@ -21,7 +21,7 @@
       <v-col cols="12" md="6">
         <v-card variant="flat">
           <v-card-item>
-            <v-card-title class="text-h4">{{ meme.name }}</v-card-title>
+            <v-card-title class="text-h4">{{ meme.description }}</v-card-title>
             <v-card-subtitle class="text-subtitle-1 text-capitalize">{{ meme.category }}</v-card-subtitle>
             <div class="mt-2">
               <v-chip
