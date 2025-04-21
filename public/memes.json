@@ -1,46 +1,347 @@
 {
-  "memes": [
-    {
-      "name": "Oh What The F*ck",
-      "category": "dog",
-      "image": "/memes/dog-surprised.webp",
-      "tags": ["surprised"]
-    },
-    {
-      "name": "That's Suspicious",
-      "category": "dog",
-      "image": "/memes/dog-suspicious.png",
-      "tags": ["suspicious", "doubt", "skeptical"]
-    },
-    {
-      "name": "Feeling Disgusted",
-      "category": "cat",
-      "image": "/memes/cat-disgusted.png",
-      "tags": ["disgusted", "vomit"]
-    },
-    {
-      "name": "Unexpected Shower",
-      "category": "cat",
-      "image": "/memes/cat-shower.png",
-      "tags": ["shower", "wet", "water"]
-    },
-    {
-      "name": "Raccocooning",
-      "category": "raccoon",
-      "image": "/memes/raccoon-cocoon.jpg",
-      "tags": ["cocooning", "towel"]
-    },
-    {
-      "name": "Emotion Overflow",
-      "category": "raccoon",
-      "image": "/memes/raccoon-emotional.png",
-      "tags": ["emotional", "sensitive"]
-    },
-    {
-      "name": "On My Way",
-      "category": "raccoon",
-      "image": "/memes/raccoon-baby.png",
-      "tags": ["car", "baby"]
-    }
-  ]
-}
+    "memes": [
+      {
+        "name": "Oh What The F*ck",
+        "category": "dog",
+        "image": "/memes/dog-surprised.webp",
+        "tags": [
+          "surprised"
+        ]
+      },
+      {
+        "name": "Feeling Disgusted",
+        "category": "cat",
+        "image": "/memes/cat-disgusted.png",
+        "tags": [
+          "disgusted",
+          "vomit"
+        ]
+      },
+      {
+        "name": "Unexpected Shower",
+        "category": "cat",
+        "image": "/memes/cat-shower.png",
+        "tags": [
+          "shower",
+          "wet",
+          "water"
+        ]
+      },
+      {
+        "name": "Raccocooning",
+        "category": "raccoon",
+        "image": "/memes/raccoon-cocoon.jpg",
+        "tags": [
+          "cocooning",
+          "towel"
+        ]
+      },
+      {
+        "name": "Emotion Overflow",
+        "category": "raccoon",
+        "image": "/memes/raccoon-emotional.png",
+        "tags": [
+          "emotional",
+          "sensitive"
+        ]
+      },
+      {
+        "name": "On My Way",
+        "category": "raccoon",
+        "image": "/memes/raccoon-baby.png",
+        "tags": [
+          "car",
+          "baby"
+        ]
+      },
+      {
+        "name": "Abandoned Puppy",
+        "category": "dog",
+        "tags": [
+          "abandoned"
+        ],
+        "image": "/memes/dog-abandoned.png"
+      },
+      {
+        "name": "Badass Dog",
+        "category": "dog",
+        "tags": [
+          "badass"
+        ],
+        "image": "/memes/dog-badass.png"
+      },
+      {
+        "name": "Bruh Moment",
+        "category": "dog",
+        "tags": [
+          "bruh"
+        ],
+        "image": "/memes/dog-bruh.png"
+      },
+      {
+        "name": "Caught in the Act",
+        "category": "dog",
+        "tags": [
+          "busted"
+        ],
+        "image": "/memes/dog-busted.png"
+      },
+      {
+        "name": "Fancy Dog",
+        "category": "dog",
+        "tags": [
+          "chic"
+        ],
+        "image": "/memes/dog-chic.png"
+      },
+      {
+        "name": "Coke Time",
+        "category": "dog",
+        "tags": [
+          "coke"
+        ],
+        "image": "/memes/dog-coke.png"
+      },
+      {
+        "name": "Crying Dog",
+        "category": "dog",
+        "tags": [
+          "crying"
+        ],
+        "image": "/memes/dog-crying.png"
+      },
+      {
+        "name": "Betrayed",
+        "category": "dog",
+        "tags": [
+          "deception"
+        ],
+        "image": "/memes/dog-deception.png"
+      },
+      {
+        "name": "Depression Mode",
+        "category": "dog",
+        "tags": [
+          "depressed"
+        ],
+        "image": "/memes/dog-depressed.png"
+      },
+      {
+        "name": "Dirty Dog",
+        "category": "dog",
+        "tags": [
+          "dirty"
+        ],
+        "image": "/memes/dog-dirty.png"
+      },
+      {
+        "name": "Much Disappoint",
+        "category": "dog",
+        "tags": [
+          "disapointed"
+        ],
+        "image": "/memes/dog-disapointed.png"
+      },
+      {
+        "name": "Classic Doge",
+        "category": "dog",
+        "tags": [
+          "doge"
+        ],
+        "image": "/memes/dog-doge.png"
+      },
+      {
+        "name": "The Hunter",
+        "category": "dog",
+        "tags": [
+          "doghunter"
+        ],
+        "image": "/memes/dog-doghunter.png"
+      },
+      {
+        "name": "All The Feels",
+        "category": "dog",
+        "tags": [
+          "emotional"
+        ],
+        "image": "/memes/dog-emotional.png"
+      },
+      {
+        "name": "Super Excited",
+        "category": "dog",
+        "tags": [
+          "excited"
+        ],
+        "image": "/memes/dog-excited.png"
+      },
+      {
+        "name": "Guilty As Charged",
+        "category": "dog",
+        "tags": [
+          "guilty"
+        ],
+        "image": "/memes/dog-guilty.png"
+      },
+      {
+        "name": "Pure Joy",
+        "category": "dog",
+        "tags": [
+          "happy-innocent"
+        ],
+        "image": "/memes/dog-happy-innocent.png"
+      },
+      {
+        "name": "Derp Face",
+        "category": "dog",
+        "tags": [
+          "idiot"
+        ],
+        "image": "/memes/dog-idiot.png"
+      },
+      {
+        "name": "Lost Boy",
+        "category": "dog",
+        "tags": [
+          "lost"
+        ],
+        "image": "/memes/dog-lost.png"
+      },
+      {
+        "name": "Whatever Dog",
+        "category": "dog",
+        "tags": [
+          "meh"
+        ],
+        "image": "/memes/dog-meh.png"
+      },
+      {
+        "name": "Morning Face",
+        "category": "dog",
+        "tags": [
+          "morning"
+        ],
+        "image": "/memes/dog-morning.png"
+      },
+      {
+        "name": "Smart Boy",
+        "category": "dog",
+        "tags": [
+          "nerd"
+        ],
+        "image": "/memes/dog-nerd.png"
+      },
+      {
+        "name": "So Angry",
+        "category": "dog",
+        "tags": [
+          "pissed"
+        ],
+        "image": "/memes/dog-pissed.png"
+      },
+      {
+        "name": "Pretty Please",
+        "category": "dog",
+        "tags": [
+          "please"
+        ],
+        "image": "/memes/dog-please.png"
+      },
+      {
+        "name": "Oops I Did It",
+        "category": "dog",
+        "tags": [
+          "pooppy"
+        ],
+        "image": "/memes/dog-pooppy.png"
+      },
+      {
+        "name": "Crazy Eyes",
+        "category": "dog",
+        "tags": [
+          "psycho"
+        ],
+        "image": "/memes/dog-psycho.png"
+      },
+      {
+        "name": "Terror Dog",
+        "category": "dog",
+        "tags": [
+          "scared"
+        ],
+        "image": "/memes/dog-scared.png"
+      },
+      {
+        "name": "Bath Time",
+        "category": "dog",
+        "tags": [
+          "shower"
+        ],
+        "image": "/memes/dog-shower.png"
+      },
+      {
+        "name": "Side Eye",
+        "category": "dog",
+        "tags": [
+          "side-look"
+        ],
+        "image": "/memes/dog-side-look.png"
+      },
+      {
+        "name": "So Tired",
+        "category": "dog",
+        "tags": [
+          "sleepy"
+        ],
+        "image": "/memes/dog-sleepy.png"
+      },
+      {
+        "name": "Hard Times",
+        "category": "dog",
+        "tags": [
+          "struggling"
+        ],
+        "image": "/memes/dog-struggling.png"
+      },
+      {
+        "name": "Hero Dog",
+        "category": "dog",
+        "tags": [
+          "superdoggy"
+        ],
+        "image": "/memes/dog-superdoggy.png"
+      },
+      {
+        "name": "Mind Blown",
+        "category": "dog",
+        "tags": [
+          "surprised"
+        ],
+        "image": "/memes/dog-surprised.png"
+      },
+      {
+        "name": "Double Take",
+        "category": "dog",
+        "tags": [
+          "suspicious"
+        ],
+        "image": "/memes/dog-suspicious.png"
+      },
+      {
+        "name": "Not Sure About This",
+        "category": "dog",
+        "tags": [
+          "suspicious",
+          "skeptical"
+        ],
+        "image": "/memes/dog-skeptical.png"
+      },
+      {
+        "name": "Poor Thing",
+        "category": "dog",
+        "tags": [
+          "victim"
+        ],
+        "image": "/memes/dog-victim.png"
+      }
+    ]
+  }
