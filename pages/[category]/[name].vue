@@ -43,6 +43,7 @@
               density="compact"
               dirty
               :model-value="currentUrl"
+              @click="selectAndCopyUrl"
             ></v-text-field>
           </v-card-item>
         </v-card>
@@ -95,6 +96,14 @@ if (meme) {
 }
 
 const copyCurrentLink = () => {
+  navigator.clipboard.writeText(currentUrl);
+  tooltipText.value = 'Link copied!';
+  setTimeout(() => tooltipText.value = 'Copy link', 2000);
+};
+
+const selectAndCopyUrl = (event: Event) => {
+  const target = event.target as HTMLInputElement;
+  target.select();
   navigator.clipboard.writeText(currentUrl);
   tooltipText.value = 'Link copied!';
   setTimeout(() => tooltipText.value = 'Copy link', 2000);
