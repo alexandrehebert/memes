@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "build": "nuxt generate",
+    "build": "nuxt build",
     "dev": "nuxt dev",
     "postinstall": "nuxt prepare"
   },

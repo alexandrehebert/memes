@@ -59,7 +59,7 @@ export default defineNuxtPlugin((nuxtApp) => {
   const vuetify = createVuetify({
     defaults: {
       global: {
-        useUtilityClasses: true, // Ensure utility classes are enabled
+        useUtilityClasses: true,
         ripple: false,
       },
     },
@@ -68,11 +68,6 @@ export default defineNuxtPlugin((nuxtApp) => {
       themes: {
         customLightTheme,
         customDarkTheme,
-      },
-      variations: {
-        colors: ['primary', 'secondary'],
-        lighten: 1,
-        darken: 2,
       },
     },
     components,

@@ -1,7 +1,7 @@
-export default defineNuxtConfig({
-  pages: true,
-  ssr: true,
-  devtools: { enabled: false },
+export default defineNuxtConfig({  
+  features: {
+    inlineStyles: false,
+  },
 
   css: [
     'vuetify/styles',
@@ -39,7 +39,6 @@ export default defineNuxtConfig({
 
   routeRules: {
     '/': { prerender: true },
-    '/**': { prerender: true },
   },
 
   compatibilityDate: '2025-04-22',

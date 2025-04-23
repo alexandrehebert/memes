@@ -80,7 +80,6 @@ if (meme) {
   const src = img('/memes/' + meme.image, {}, { preset: 'seo' });
 
   useSeoMeta({
-    title: meme.description,
     ogTitle: meme.name,
     ogDescription: meme.description,
     ogImage: `${HOST}${src}`,
@@ -90,6 +89,10 @@ if (meme) {
     twitterCard: 'summary_large_image',
     twitterImage: `${HOST}${src}`,
   });
+
+  useHead({
+    title: meme.description,
+  })
 }
 
 const copyCurrentLink = () => {
