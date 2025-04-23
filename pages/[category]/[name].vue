@@ -76,13 +76,16 @@ const meme = memeStore.getMemeByNameAndCategory(
 const currentUrl = meme ? `${HOST}/${route.params.category}/${route.params.name}` : '';
 
 if (meme) {
+  const img = useImage();
+  const src = img('/memes/cat-shower.png', {  with: 300, height: 300, quality: 70 });
+
   useSeoMeta({
     title: meme.description,
     ogTitle: meme.description,
-    ogImage: `${HOST}${meme.image}`,
+    ogImage: `${HOST}${src}`,
     twitterTitle: meme.description,
     twitterCard: 'summary_large_image',
-    twitterImage: `${HOST}${meme.image}`,
+    twitterImage: `${HOST}${src}`,
   });
 }
 
