@@ -34,19 +34,22 @@
               <v-card height="100%" elevation="2" variant="elevated">
                 <div class="position-relative">
                     <v-img :src="'/memes/' + meme.image" :aspect-ratio="1" cover></v-img>
-                    <v-tooltip location="left">
-                        <template #activator="{ props }">
-                            <v-btn
-                                icon
-                                v-bind="props"
-                                size="small"
-                                class="copy-btn"
-                                @click.stop="(e: Event) => copyMemeLink(meme, e)"                                >
-                                <v-icon size="small">mdi-content-copy</v-icon>
-                            </v-btn>
-                        </template>
-                        {{ tooltipText }}
-                    </v-tooltip>
+                    <client-only>
+                      <v-tooltip location="left" :id="meme.name">
+                          <template #activator="{ props }">
+                              <v-btn
+                                  icon
+                                  v-bind="props"
+                                  size="small"
+                                  class="copy-btn"
+                                  @click.stop="(e: Event) => copyMemeLink(meme, e)"     
+                                  @mouseenter="tooltipText = null"                        >
+                                  <v-icon size="small">mdi-content-copy</v-icon>
+                              </v-btn>
+                          </template>
+                          {{ tooltipText ?? 'Copy link!' }}
+                      </v-tooltip>
+                  </client-only>
                 </div>
                 <v-card-item>
                   <v-card-title>{{ meme.description }}</v-card-title>
@@ -110,12 +113,12 @@ const fuzzyMatch = (text: string, search: string): boolean => {
 const { memes, categories } = useMemeStore();
 const searchQuery = ref<string | null>(null);
 const selectedCategory = ref<string | null>(null);
-const tooltipText = ref('Copy link');
+const tooltipText = ref<string | null>(null);
 const filteredMemes = ref<Meme[]>(memes);
 const groupedMemes = ref<{ name: string; memes: Meme[] }[]>(
   categories.map(category => ({
     name: category,
-    memes: memes.filter(meme => meme.category === category)
+    memes: memes.filter(meme => meme.category === category).sort((a, b) => a.name.localeCompare(b.name))
   }))
 );
 
@@ -139,7 +142,7 @@ watch([searchQuery, selectedCategory], () => {
   filteredMemes.value = filtered;
   groupedMemes.value = categories.map(category => ({
     name: category,
-    memes: filteredMemes.value.filter(meme => meme.category === category)
+    memes: filteredMemes.value.filter(meme => meme.category === category).sort((a, b) => a.name.localeCompare(b.name))
   }));
 });
 
@@ -151,7 +154,7 @@ const copyMemeLink = (meme: Meme, event: Event) => {
   const url = `${HOST}/${meme.category}/${meme.name}`;
   navigator.clipboard.writeText(url);
   tooltipText.value = 'Copied!';
-  setTimeout(() => tooltipText.value = 'Copy link', 2000);
+  setTimeout(() => tooltipText.value = null, 2000);
 };
 </script>
 

@@ -12,9 +12,11 @@
             @click="copyCurrentLink"
           >
             <v-icon size="small">mdi-content-copy</v-icon>
-            <v-tooltip activator="parent" location="left">
-              {{ tooltipText }}
-            </v-tooltip>
+            <client-only>
+              <v-tooltip activator="parent" location="left">
+                {{ tooltipText }}
+              </v-tooltip>
+            </client-only>
           </v-btn>
         </div>
       </v-col>

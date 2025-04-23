@@ -13,7 +13,7 @@
         </div>
       </v-app-bar-title>
       <v-spacer></v-spacer>
-      <v-btn icon="mdi-theme-light-dark" @click="themeStore.toggleTheme"></v-btn>
+      <v-btn icon="mdi-theme-light-dark" @click="toggleTheme"></v-btn>
     </v-app-bar>
 
     <v-main>
@@ -23,19 +23,25 @@
 </template>
 
 <script lang="ts" setup>
-import { useThemeStore } from './store/theme';
-import { storeToRefs } from 'pinia';
-import { watch } from 'vue';
 import { useTheme } from 'vuetify';
+import { useThemeStore } from './store/theme';
 
 const themeStore = useThemeStore();
-const { isDark } = storeToRefs(themeStore);
 const theme = useTheme();
 
-watch(isDark, (newValue) => {
-  theme.global.name.value = newValue ? 'customDarkTheme' : 'customLightTheme';
+const toggleTheme = () => {
+  themeStore.toggleTheme();
+};
+
+watch(
+  () => themeStore.isDark,
+  (isDark) => {
+    theme.global.name.value = isDark ? 'customDarkTheme' : 'customLightTheme';
+  },
+  { immediate: true }
+);
+
+onMounted(() => {
+  themeStore.initTheme();
 });
 </script>
-
-<style scoped>
-</style>
