@@ -80,19 +80,16 @@ if (meme) {
   const src = img('/memes/' + meme.image, {}, { preset: 'seo' });
 
   useSeoMeta({
-    ogTitle: meme.name,
-    ogDescription: meme.description,
+    title: meme.description,
+    ogTitle: meme.description,
+    ogDescription: meme.category + '/' + meme.name,
     ogImage: `${HOST}${src}`,
     ogUrl: currentUrl,
-    twitterTitle: meme.name,
-    twitterDescription: meme.description,
+    twitterTitle: meme.description,
+    twitterDescription: meme.category + '/' + meme.name,
     twitterCard: 'summary_large_image',
     twitterImage: `${HOST}${src}`,
   });
-
-  useHead({
-    title: meme.description,
-  })
 }
 
 const copyCurrentLink = () => {
