@@ -19,12 +19,21 @@ export default defineNuxtConfig({
 
   image: {
     screens: {
-      xs: 300,
-      sm: 300,
-      md: 300,
-      lg: 300,
-      xl: 300,
-      xxl: 300,
+      xs: 260,
+      sm: 260,
+      md: 260,
+      lg: 260,
+      xl: 260,
+      xxl: 260,
+    },
+    presets: {
+      seo: {
+        modifiers: {
+          width: 260,
+          height: 260,
+          quality: 70
+        }
+      }
     },
     format: ['png'],
     provider: 'ipx',
