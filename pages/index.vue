@@ -41,8 +41,7 @@
                                 v-bind="props"
                                 size="small"
                                 class="copy-btn"
-                                @click.stop="copyMemeLink(meme)"
-                            >
+                                @click.stop="(e: Event) => copyMemeLink(meme, e)"                                >
                                 <v-icon size="small">mdi-content-copy</v-icon>
                             </v-btn>
                         </template>
@@ -144,12 +143,12 @@ watch([searchQuery, selectedCategory], () => {
   }));
 });
 
-const goToMeme = (meme: Meme) => {
-  router.push({ params: { name: meme.name, category: meme.category } });
-};
-
-const copyMemeLink = (meme: Meme) => {
-  const url = `${HOST}${meme.category}/${meme.name}`;
+const copyMemeLink = (meme: Meme, event: Event) => {
+  if (event) {
+    event.preventDefault();
+    event.stopPropagation();
+  }
+  const url = `${HOST}/${meme.category}/${meme.name}`;
   navigator.clipboard.writeText(url);
   tooltipText.value = 'Copied!';
   setTimeout(() => tooltipText.value = 'Copy link', 2000);
