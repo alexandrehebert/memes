@@ -120,7 +120,7 @@ const groupedMemes = ref<{ name: string; memes: Meme[] }[]>(
   }))
 );
 
-watch(searchQuery, () => {
+watch([searchQuery, selectedCategory], () => {
   let filtered = memes;
   
   if (selectedCategory.value) {
