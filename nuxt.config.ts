@@ -19,7 +19,6 @@ export default defineNuxtConfig({
 
   image: {
     dir: 'public/memes',
-    provider: 'ipx',
     screens: {
       'whatsapp': 300
     },
