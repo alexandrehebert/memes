@@ -5,7 +5,7 @@
         "category": "misc",
         "image": "misc-finish-him.png",
         "tags": [
-          "brutal", "mortal kombat", "fatality"
+          "brutal", "mortal kombat", "fatality", "fight", "game", "violence", "finish"
         ]
       },
       {
@@ -13,7 +13,7 @@
         "category": "dog",
         "image": "dog-surprised.webp",
         "tags": [
-          "surprised"
+          "surprised", "shocked", "wtf", "confused", "amazed", "astonished", "disbelief"
         ]
       },
       {
@@ -21,8 +21,7 @@
         "category": "cat",
         "image": "cat-disgusted.png",
         "tags": [
-          "disgusted",
-          "vomit"
+          "disgusted", "vomit", "gross", "nauseous", "yuck", "repulsed", "sick"
         ]
       },
       {
@@ -30,9 +29,7 @@
         "category": "cat",
         "image": "cat-shower.png",
         "tags": [
-          "shower",
-          "wet",
-          "water"
+          "shower", "wet", "water", "bath", "soaked", "drenched", "unhappy", "surprise"
         ]
       },
       {
@@ -40,8 +37,7 @@
         "category": "raccoon",
         "image": "raccoon-cocoon.jpg",
         "tags": [
-          "cocooning",
-          "towel"
+          "cocooning", "towel", "wrapped", "cozy", "comfortable", "snug", "warm"
         ]
       },
       {
@@ -49,8 +45,7 @@
         "category": "raccoon",
         "image": "raccoon-emotional.png",
         "tags": [
-          "emotional",
-          "sensitive"
+          "emotional", "sensitive", "crying", "feelings", "touched", "overwhelmed"
         ]
       },
       {
@@ -58,15 +53,14 @@
         "category": "raccoon",
         "image": "raccoon-baby.png",
         "tags": [
-          "car",
-          "baby"
+          "car", "baby", "travel", "journey", "cute", "tiny", "adventure"
         ]
       },
       {
         "name": "Abandoned Puppy",
         "category": "dog",
         "tags": [
-          "abandoned"
+          "abandoned", "sad", "lonely", "neglected", "homeless", "miserable"
         ],
         "image": "dog-abandoned.png"
       },
@@ -74,7 +68,7 @@
         "name": "Badass Dog",
         "category": "dog",
         "tags": [
-          "badass"
+          "badass", "cool", "tough", "attitude", "swagger", "confident"
         ],
         "image": "dog-badass.png"
       },
@@ -82,7 +76,7 @@
         "name": "Bruh Moment",
         "category": "dog",
         "tags": [
-          "bruh"
+          "bruh", "seriously", "whatever", "dude", "annoyed", "judgmental"
         ],
         "image": "dog-bruh.png"
       },
@@ -90,7 +84,7 @@
         "name": "Caught in the Act",
         "category": "dog",
         "tags": [
-          "busted"
+          "busted", "caught", "guilty", "shame", "surprise", "embarrassed"
         ],
         "image": "dog-busted.png"
       },
@@ -98,7 +92,7 @@
         "name": "Fancy Dog",
         "category": "dog",
         "tags": [
-          "chic"
+          "chic", "fancy", "elegant", "sophisticated", "stylish", "posh"
         ],
         "image": "dog-chic.png"
       },
@@ -106,7 +100,7 @@
         "name": "Coke Time",
         "category": "dog",
         "tags": [
-          "coke"
+          "coke", "drink", "refreshment", "thirsty", "beverage", "cola"
         ],
         "image": "dog-coke.png"
       },
@@ -114,7 +108,7 @@
         "name": "Crying Dog",
         "category": "dog",
         "tags": [
-          "crying"
+          "crying", "sad", "tears", "emotional", "upset", "heartbroken"
         ],
         "image": "dog-crying.png"
       },
@@ -122,7 +116,7 @@
         "name": "Betrayed",
         "category": "dog",
         "tags": [
-          "deception"
+          "deception", "betrayed", "trust", "hurt", "disappointed", "backstab"
         ],
         "image": "dog-deception.png"
       },
@@ -130,7 +124,7 @@
         "name": "Depression Mode",
         "category": "dog",
         "tags": [
-          "depressed"
+          "depressed", "sad", "down", "blue", "melancholy", "gloomy"
         ],
         "image": "dog-depressed.png"
       },
@@ -138,7 +132,7 @@
         "name": "Dirty Dog",
         "category": "dog",
         "tags": [
-          "dirty"
+          "dirty", "messy", "muddy", "filthy", "unclean", "soiled"
         ],
         "image": "dog-dirty.png"
       },
@@ -146,7 +140,7 @@
         "name": "Much Disappoint",
         "category": "dog",
         "tags": [
-          "disapointed"
+          "disappointed", "letdown", "unhappy", "dissatisfied", "disillusioned", "dismayed"
         ],
         "image": "dog-disapointed.png"
       },
@@ -154,7 +148,7 @@
         "name": "Classic Doge",
         "category": "dog",
         "tags": [
-          "doge"
+          "doge", "meme", "classic", "shiba", "wow", "iconic", "original"
         ],
         "image": "dog-doge.png"
       },
@@ -162,7 +156,7 @@
         "name": "The Hunter",
         "category": "dog",
         "tags": [
-          "doghunter"
+          "doghunter", "hunting", "predator", "stalking", "focused", "determined"
         ],
         "image": "dog-doghunter.png"
       },
@@ -170,7 +164,7 @@
         "name": "All The Feels",
         "category": "dog",
         "tags": [
-          "emotional"
+          "emotional", "feelings", "sensitive", "touched", "moved", "sentimental"
         ],
         "image": "dog-emotional.png"
       },
@@ -178,7 +172,7 @@
         "name": "Super Excited",
         "category": "dog",
         "tags": [
-          "excited"
+          "excited", "happy", "thrilled", "joy", "ecstatic", "enthusiastic"
         ],
         "image": "dog-excited.png"
       },
@@ -186,7 +180,7 @@
         "name": "Guilty As Charged",
         "category": "dog",
         "tags": [
-          "guilty"
+          "guilty", "ashamed", "caught", "remorse", "sorry", "regret"
         ],
         "image": "dog-guilty.png"
       },
@@ -194,7 +188,7 @@
         "name": "Pure Joy",
         "category": "dog",
         "tags": [
-          "happy-innocent"
+          "happy-innocent", "joyful", "pure", "cheerful", "blissful", "carefree"
         ],
         "image": "dog-happy-innocent.png"
       },
@@ -202,7 +196,7 @@
         "name": "Derp Face",
         "category": "dog",
         "tags": [
-          "idiot"
+          "idiot", "derp", "silly", "goofy", "foolish", "dumb"
         ],
         "image": "dog-idiot.png"
       },
@@ -210,7 +204,7 @@
         "name": "Lost Boy",
         "category": "dog",
         "tags": [
-          "lost"
+          "lost", "confused", "disoriented", "wandering", "searching", "misplaced"
         ],
         "image": "dog-lost.png"
       },
@@ -218,7 +212,7 @@
         "name": "Whatever Dog",
         "category": "dog",
         "tags": [
-          "meh"
+          "meh", "indifferent", "unimpressed", "bored", "apathetic", "uncaring"
         ],
         "image": "dog-meh.png"
       },
@@ -226,7 +220,7 @@
         "name": "Morning Face",
         "category": "dog",
         "tags": [
-          "morning"
+          "morning", "sleepy", "groggy", "tired", "drowsy", "yawning"
         ],
         "image": "dog-morning.png"
       },
@@ -234,7 +228,7 @@
         "name": "Smart Boy",
         "category": "dog",
         "tags": [
-          "nerd"
+          "nerd", "smart", "intelligent", "glasses", "clever", "genius"
         ],
         "image": "dog-nerd.png"
       },
@@ -242,7 +236,7 @@
         "name": "So Angry",
         "category": "dog",
         "tags": [
-          "pissed"
+          "pissed", "angry", "mad", "furious", "rage", "irritated"
         ],
         "image": "dog-pissed.png"
       },
@@ -250,7 +244,7 @@
         "name": "Pretty Please",
         "category": "dog",
         "tags": [
-          "please"
+          "please", "begging", "puppy-eyes", "request", "adorable", "pleading"
         ],
         "image": "dog-please.png"
       },
@@ -258,15 +252,15 @@
         "name": "Oops I Did It",
         "category": "dog",
         "tags": [
-          "pooppy"
+          "pooppy", "accident", "guilty", "mess", "shame", "oops", "mistake"
         ],
         "image": "dog-pooppy.png"
       },
       {
-        "name": "Crazy Eyes",
+        "name": "Maniac",
         "category": "dog",
         "tags": [
-          "psycho"
+          "psycho", "maniac", "eyes", "crazy", "intense", "wild", "insane"
         ],
         "image": "dog-psycho.png"
       },
@@ -274,7 +268,7 @@
         "name": "Terror Dog",
         "category": "dog",
         "tags": [
-          "scared"
+          "scared", "terrified", "fear", "horror", "panic", "frightened"
         ],
         "image": "dog-scared.png"
       },
@@ -282,7 +276,7 @@
         "name": "Bath Time",
         "category": "dog",
         "tags": [
-          "shower"
+          "shower", "bath", "wet", "clean", "washing", "bathroom"
         ],
         "image": "dog-shower.png"
       },
@@ -290,7 +284,7 @@
         "name": "Side Eye",
         "category": "dog",
         "tags": [
-          "side-look"
+          "side-look", "judging", "suspicious", "skeptical", "doubtful", "questioning"
         ],
         "image": "dog-side-look.png"
       },
@@ -298,7 +292,7 @@
         "name": "So Tired",
         "category": "dog",
         "tags": [
-          "sleepy"
+          "sleepy", "tired", "exhausted", "drowsy", "nap", "yawn"
         ],
         "image": "dog-sleepy.png"
       },
@@ -306,7 +300,7 @@
         "name": "Hard Times",
         "category": "dog",
         "tags": [
-          "struggling"
+          "struggling", "difficult", "hardship", "challenge", "tough", "effort"
         ],
         "image": "dog-struggling.png"
       },
@@ -314,7 +308,7 @@
         "name": "Hero Dog",
         "category": "dog",
         "tags": [
-          "superdoggy"
+          "superdoggy", "hero", "brave", "superman", "cape", "rescue"
         ],
         "image": "dog-superdoggy.png"
       },
@@ -322,7 +316,7 @@
         "name": "Double Take",
         "category": "dog",
         "tags": [
-          "suspicious"
+          "suspicious", "doubting", "unsure", "wary", "distrustful", "cautious"
         ],
         "image": "dog-suspicious.png"
       },
@@ -330,8 +324,7 @@
         "name": "Not Sure About This",
         "category": "dog",
         "tags": [
-          "suspicious",
-          "skeptical"
+          "suspicious", "skeptical", "doubtful", "uncertain", "hesitant", "questioning"
         ],
         "image": "dog-skeptical.png"
       },
@@ -339,7 +332,7 @@
         "name": "Poor Thing",
         "category": "dog",
         "tags": [
-          "victim"
+          "victim", "unfortunate", "pitiful", "sad", "helpless", "suffering"
         ],
         "image": "dog-victim.png"
       }

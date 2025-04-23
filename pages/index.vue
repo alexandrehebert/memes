@@ -55,15 +55,15 @@
                   <v-card-title>{{ meme.description }}</v-card-title>
                   <v-card-subtitle>
                       <div class="mt-2">
-                      <v-chip
-                          v-for="tag in meme.tags"
-                          :key="tag"
-                          size="small"
-                          class="mr-1 mb-1"
-                          variant="tonal"
-                      >
-                          {{ tag }}
-                      </v-chip>
+                          <v-chip
+                              v-for="tag in meme.tags.slice(0, 3)"
+                              :key="tag"
+                              size="small"
+                              class="mr-1 mb-1"
+                              variant="tonal"
+                          >
+                              {{ tag }}
+                          </v-chip>
                       </div>
                   </v-card-subtitle>
                 </v-card-item>
