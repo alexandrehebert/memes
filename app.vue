@@ -15,7 +15,6 @@
       <v-spacer></v-spacer>
       <v-btn :icon="themeStore.isDark ? 'mdi-weather-night' : 'mdi-weather-sunny'" @click="toggleTheme"></v-btn>
     </v-app-bar>
-
     <v-main>
       <NuxtPage />
     </v-main>
