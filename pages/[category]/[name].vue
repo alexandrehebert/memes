@@ -80,15 +80,14 @@ if (meme) {
   const src = img('/memes/' + meme.image, {}, { preset: 'seo' });
 
   useSeoMeta({
-    title: meme.description,
-    ogTitle: meme.description,
+    title: meme.name,
+    ogTitle: meme.name,
     ogDescription: meme.description,
     ogImage: `${HOST}${src}`,
-    ogImageWidth: '300',
     ogImageType: 'image/jpeg',
     ogUrl: currentUrl,
     ogType: 'website',
-    twitterTitle: meme.description,
+    twitterTitle: meme.name,
     twitterDescription: meme.description,
     twitterCard: 'summary_large_image',
     twitterImage: `${HOST}${src}`,
