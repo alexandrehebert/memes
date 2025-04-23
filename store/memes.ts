@@ -5,14 +5,19 @@ import { memes } from '~/static/memes.json'
 
 export const useMemeStore = defineStore('memes', {
   state: () => {
+    const allMemes = memes.map((meme: any): Meme => ({
+      name: meme.name.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
+      description: meme.name,
+      category: meme.category,
+      image: meme.image,
+      tags: meme.tags,
+    }))
+    const uniqueCategories = [...new Set(memes.map(meme => meme.category))];
+    const categories = uniqueCategories.sort();
+
     return {
-      memes: memes.map((meme: any): Meme => ({
-        name: meme.name.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
-        description: meme.name,
-        category: meme.category,
-        image: meme.image,
-        tags: meme.tags,
-      }))
+      memes: allMemes,
+      categories,
     };
   },
   actions: {

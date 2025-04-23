@@ -1,5 +1,6 @@
 .legacy
-.ouput
+.output
 dist
 node_modules
 .nuxt
+.DS_Store

@@ -23,7 +23,7 @@
       </v-col>
     </v-row>
 
-    <template v-if="memeStore.memes.length > 0">
+    <template v-if="memes.length > 0">
       <template v-for="category in groupedMemes" :key="category.name">
         <v-row v-if="category.memes.length > 0" class="mt-4">
           <v-col cols="12" class="text-capitalize">
@@ -85,7 +85,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, computed } from 'vue';
+import { ref, watch } from 'vue';
 import { useMemeStore } from '../store/memes';
 import type { Meme } from '../types';
 
@@ -108,16 +108,20 @@ const fuzzyMatch = (text: string, search: string): boolean => {
   return searchIndex === search.length;
 };
 
-const memeStore = useMemeStore();
+const { memes, categories } = useMemeStore();
 const searchQuery = ref<string | null>(null);
 const selectedCategory = ref<string | null>(null);
 const tooltipText = ref('Copy link');
+const filteredMemes = ref<Meme[]>(memes);
+const groupedMemes = ref<{ name: string; memes: Meme[] }[]>(
+  categories.map(category => ({
+    name: category,
+    memes: memes.filter(meme => meme.category === category)
+  }))
+);
 
-const uniqueCategories = [...new Set(memeStore.memes.map(meme => meme.category))];
-const categories = uniqueCategories.sort();
-
-const filteredMemes = computed(() => {
-  let filtered = memeStore.memes;
+watch(searchQuery, () => {
+  let filtered = memes;
   
   if (selectedCategory.value) {
     filtered = filtered.filter(meme => meme.category === selectedCategory.value);
@@ -133,13 +137,12 @@ const filteredMemes = computed(() => {
     );
   }
   
-  return filtered;
+  filteredMemes.value = filtered;
+  groupedMemes.value = categories.map(category => ({
+    name: category,
+    memes: filteredMemes.value.filter(meme => meme.category === category)
+  }));
 });
-
-const groupedMemes = categories.map(category => ({
-  name: category,
-  memes: filteredMemes.value.filter(meme => meme.category === category)
-}));
 
 const goToMeme = (meme: Meme) => {
   router.push({ params: { name: meme.name, category: meme.category } });
