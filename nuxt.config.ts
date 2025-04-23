@@ -18,6 +18,7 @@ export default defineNuxtConfig({
   ],
 
   image: {
+    dir: 'public',
     screens: {
       xs: 300,
       sm: 300,
@@ -37,6 +38,8 @@ export default defineNuxtConfig({
     },
     format: ['png'],
     provider: 'ipx',
+    domains: [process.env.HOST || 'localhost'],
+    staticFilename: '[name]-[hash][ext]'
   },
 
   components: true,
