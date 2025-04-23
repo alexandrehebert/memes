@@ -77,7 +77,7 @@ const currentUrl = meme ? `${HOST}/${route.params.category}/${route.params.name}
 
 if (meme) {
   const img = useImage();
-  const src = img(meme.image, {}, { preset: 'seo' });
+  const src = img('/memes/' + meme.image, {}, { preset: 'seo' });
 
   useServerSeoMeta({
     title: meme.description,
