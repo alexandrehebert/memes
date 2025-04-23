@@ -13,7 +13,7 @@
         </NuxtLink>
       </v-app-bar-title>
       <v-spacer></v-spacer>
-      <v-btn icon="mdi-theme-light-dark" @click="toggleTheme"></v-btn>
+      <v-btn :icon="themeStore.isDark ? 'mdi-weather-night' : 'mdi-weather-sunny'" @click="toggleTheme"></v-btn>
     </v-app-bar>
 
     <v-main>
