@@ -86,7 +86,7 @@ if (meme) {
     ogImage: `${HOST}${src}`,
     ogImageWidth: '300',
     ogImageHeight: '300',
-    ogImageType: 'image/jpeg',
+    ogImageType: 'image/png',
     ogUrl: currentUrl,
     ogType: 'website',
     twitterTitle: meme.description,
