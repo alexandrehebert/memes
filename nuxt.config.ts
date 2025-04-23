@@ -19,13 +19,12 @@ export default defineNuxtConfig({
 
   image: {
     screens: {
-      'whatsapp': 300
+      'whatsapp': 600
     },
     presets: {
       seo: {
         modifiers: {
           width: 600,
-          format: 'jpeg',
           quality: 80
         }
       }
