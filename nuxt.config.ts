@@ -36,8 +36,6 @@ export default defineNuxtConfig({
         }
       }
     },
-    format: ['png'],
-    provider: 'ipx',
   },
 
   components: true,
