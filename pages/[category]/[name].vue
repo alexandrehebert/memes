@@ -79,13 +79,12 @@ if (meme) {
   const img = useImage();
   const src = img('/memes/' + meme.image, {}, { preset: 'seo' });
 
-  useServerSeoMeta({
+  useSeoMeta({
     title: meme.description,
     ogTitle: meme.description,
     ogDescription: meme.description,
     ogImage: `${HOST}${src}`,
     ogImageWidth: '300',
-    ogImageHeight: '300',
     ogImageType: 'image/jpeg',
     ogUrl: currentUrl,
     ogType: 'website',

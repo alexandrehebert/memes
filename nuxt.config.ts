@@ -24,8 +24,7 @@ export default defineNuxtConfig({
     presets: {
       seo: {
         modifiers: {
-          width: 300,
-          height: 300,
+          width: 600,
           format: 'jpeg',
           quality: 80
         }
