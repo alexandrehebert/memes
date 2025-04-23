@@ -19,20 +19,17 @@ export default defineNuxtConfig({
 
   image: {
     dir: 'public/memes',
+    provider: 'ipx',
     screens: {
-      xs: 300,
-      sm: 300,
-      md: 300,
-      lg: 300,
-      xl: 300,
-      xxl: 300,
+      'whatsapp': 300
     },
     presets: {
       seo: {
         modifiers: {
           width: 300,
           height: 300,
-          quality: 70
+          format: 'jpeg',
+          quality: 80
         }
       }
     },
