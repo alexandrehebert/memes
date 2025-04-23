@@ -31,7 +31,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      host: process.env.HOST || 'http://localhost:3088',
+      host: process.env.HOST || 'http://localhost:3000',
     },
   },
 });
