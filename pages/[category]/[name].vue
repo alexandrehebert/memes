@@ -77,13 +77,20 @@ const currentUrl = meme ? `${HOST}/${route.params.category}/${route.params.name}
 
 if (meme) {
   const img = useImage();
-  const src = img(meme.image, { quality: 70 }, { preset: 'seo' });
+  const src = img(meme.image, { width: 300, height: 300, quality: 70 }, { preset: 'seo' });
 
   useSeoMeta({
     title: meme.description,
     ogTitle: meme.description,
+    ogDescription: meme.description,
     ogImage: `${HOST}${src}`,
+    ogImageWidth: '300',
+    ogImageHeight: '300',
+    ogImageType: 'image/jpeg',
+    ogUrl: currentUrl,
+    ogType: 'website',
     twitterTitle: meme.description,
+    twitterDescription: meme.description,
     twitterCard: 'summary_large_image',
     twitterImage: `${HOST}${src}`,
   });
