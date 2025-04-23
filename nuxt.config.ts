@@ -18,7 +18,7 @@ export default defineNuxtConfig({
   ],
 
   image: {
-    dir: 'public/memes/',
+    dir: 'public/memes',
     screens: {
       xs: 300,
       sm: 300,
