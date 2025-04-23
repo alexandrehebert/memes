@@ -9,7 +9,7 @@
             width="40"
             height="40"
           ></v-img>
-          <router-link to="/" style="color: var(--v-primary-base); text-decoration: none;">Memes</router-link>
+          <a style="color: var(--v-primary-base); text-decoration: none;" href="/">Memes</a>
         </div>
       </v-app-bar-title>
       <v-spacer></v-spacer>
@@ -17,33 +17,23 @@
     </v-app-bar>
 
     <v-main>
-      <router-view></router-view>
+      <NuxtPage />
     </v-main>
   </v-app>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
-import { useThemeStore } from './store';
+<script lang="ts" setup>
+import { useThemeStore } from './store/theme';
 import { storeToRefs } from 'pinia';
 import { watch } from 'vue';
 import { useTheme } from 'vuetify';
 
-export default defineComponent({
-  name: 'App',
-  setup() {
-    const themeStore = useThemeStore();
-    const { isDark } = storeToRefs(themeStore);
-    const theme = useTheme();
+const themeStore = useThemeStore();
+const { isDark } = storeToRefs(themeStore);
+const theme = useTheme();
 
-    watch(isDark, (newValue) => {
-      theme.global.name.value = newValue ? 'customDarkTheme' : 'customLightTheme';
-    });
-
-    return {
-      themeStore
-    };
-  }
+watch(isDark, (newValue) => {
+  theme.global.name.value = newValue ? 'customDarkTheme' : 'customLightTheme';
 });
 </script>
 

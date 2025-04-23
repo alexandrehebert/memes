@@ -8,7 +8,7 @@
 
 <script setup lang="ts">
 import { computed, onMounted, onUnmounted } from 'vue';
-import { useThemeStore } from '../store';
+import { useThemeStore } from '../store/theme';
 
 const themeStore = useThemeStore();
 

@@ -1,6 +1,14 @@
 {
     "memes": [
       {
+        "name": "Finish Him!",
+        "category": "misc",
+        "image": "/memes/misc-finish-him.png",
+        "tags": [
+          "brutal", "mortal kombat", "fatality"
+        ]
+      },
+      {
         "name": "Oh What The F*ck",
         "category": "dog",
         "image": "/memes/dog-surprised.webp",
@@ -309,14 +317,6 @@
           "superdoggy"
         ],
         "image": "/memes/dog-superdoggy.png"
-      },
-      {
-        "name": "Mind Blown",
-        "category": "dog",
-        "tags": [
-          "surprised"
-        ],
-        "image": "/memes/dog-surprised.png"
       },
       {
         "name": "Double Take",

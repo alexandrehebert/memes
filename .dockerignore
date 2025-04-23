@@ -1,0 +1,10 @@
+# Ignore Nuxt-related files and directories
+.nuxt/
+dist/
+.ouput/
+node_modules/
+*.nuxt
+.nuxtignore
+.nuxt.config.js
+.nuxt.config.ts
+.legacy/
