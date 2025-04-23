@@ -33,7 +33,7 @@
             <NuxtLink :to="{ name: 'category-name', params: { name: meme.name, category: meme.category } }">
               <v-card height="100%" elevation="2" variant="elevated">
                 <div class="position-relative">
-                    <v-img :src="meme.image" :aspect-ratio="1" cover></v-img>
+                    <v-img :src="'/memes/' + meme.image" :aspect-ratio="1" cover></v-img>
                     <v-tooltip location="left">
                         <template #activator="{ props }">
                             <v-btn

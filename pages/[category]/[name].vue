@@ -3,7 +3,7 @@
     <v-row>
       <v-col cols="12" md="6">
         <div class="position-relative rounded-img">
-          <v-img :src="meme.image" :aspect-ratio="1" cover></v-img>
+          <v-img :src="'/memes/' + meme.image" :aspect-ratio="1" cover></v-img>
           <v-btn
             icon
             size="small"
