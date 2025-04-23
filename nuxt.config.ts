@@ -17,6 +17,19 @@ export default defineNuxtConfig({
     '@nuxt/image',
   ],
 
+  image: {
+    screens: {
+      xs: 300,
+      sm: 300,
+      md: 300,
+      lg: 300,
+      xl: 300,
+      xxl: 300,
+    },
+    format: ['png'],
+    provider: 'ipx',
+  },
+
   components: true,
 
   build: {
